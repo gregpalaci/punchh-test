@@ -31,7 +31,7 @@ const MOCK_BACKEND = {
           { id: 0, status: "success", color: "green" },
           { id: 1, status: "pending", color: "orange" },
           { id: 2, status: "failed", color: "red" },
-          { id: window.random(3, 10), status: "new", color: "blue" },
+          { id: window.random(3, 10), status: "new new", color: "blue" },
         ]);
       }, 500);
     });
@@ -54,7 +54,7 @@ export default {
   methods: {
     update(status) {
       // instead of logging it, show it on the view which status was updated most recently
-      // console.log("update status: " + status);
+      console.log("update status: " + status);
       this.currentStatus = status;
     },
   },

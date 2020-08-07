@@ -1,5 +1,5 @@
 <template>
-  <button @click="change">Update Status {{ status }} !</button>
+  <button @click="change">Update Status {{ statusValue }} !</button>
 </template>
 
 <script>
@@ -13,13 +13,13 @@ export default {
   },
   methods: {
     change: function() {
-      if (this.id === 0) {
-        this.statusValue = "success";
-      } else if (this.id === 1) {
-        this.statusValue = "pending";
-      } else {
-        this.statusValue = "failed";
-      }
+      // if (this.id === 0) {
+      //   this.statusValue = "success";
+      // } else if (this.id === 1) {
+      //   this.statusValue = "pending";
+      // } else {
+      //   this.statusValue = "failed";
+      // }
       this.$emit("change", this.statusValue);
     },
   },
